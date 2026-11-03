@@ -36,3 +36,7 @@ test('minimal plus rich is reconciled explicitly and repair auto preserves origi
 test('unknown style controls fail safely instead of ignoring user preferences',()=>{
  for(const field of ['visualStyle','colorTreatment','detailLevel'])assert.throws(()=>buildPrompt({...base,[field]:'not-a-choice'}),/tidak sah/);
 });
+test('repair colour-only preference preserves original style and layout',()=>{
+ const p=buildPrompt({...base,mode:'repair',repair:'Meriahkan warna sahaja',colorTreatment:'vibrant'});
+ assert.match(p,/Kekalkan gaya asal/);assert.match(p,/Kekalkan susun atur asal/);assert.match(p,/Kekalkan perincian asal/);assert.match(p,/warna kaya dan tepu/);assert.doesNotMatch(p,/Gunakan bingkai halus/);
+});
