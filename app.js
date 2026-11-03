@@ -1,6 +1,6 @@
-import {categories,presets} from './data.js';
-import {visualStyles,colorTreatments,detailLevels,creativeDirection} from './creative.js';
-import {formats,getSpec,recommend,buildPrompt} from './engine.js';
+import {categories,presets} from './data.js?v=20261104-compact1';
+import {visualStyles,colorTreatments,detailLevels,creativeDirection} from './creative.js?v=20261104-compact1';
+import {formats,getSpec,recommend,buildPrompt} from './engine.js?v=20261104-compact1';
 const $=id=>document.getElementById(id),form=$('prompt-form');
 let mode='quick',previousMode='quick',selected=presets[0],lastPrompt='',toastTimer,manualPreset=false;
 function toast(message){$('toast').textContent=message;$('toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('visible'),5000);}
