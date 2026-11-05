@@ -1,6 +1,6 @@
-import {categories,presets} from './data.js?v=20261105-studio-cikgu-pu';
-import {visualStyles,colorTreatments,detailLevels,creativeDirection} from './creative.js?v=20261105-studio-cikgu-pu';
-import {formats,getSpec,recommend,buildPrompt} from './engine.js?v=20261105-studio-cikgu-pu';
+import {categories,presets} from './data.js?v=20261105-studio-cikgu-pu2';
+import {visualStyles,colorTreatments,detailLevels,creativeDirection} from './creative.js?v=20261105-studio-cikgu-pu2';
+import {formats,getSpec,recommend,buildPrompt} from './engine.js?v=20261105-studio-cikgu-pu2';
 const $=id=>document.getElementById(id),form=$('prompt-form');
 let mode='quick',previousMode='quick',selected=presets[0],lastPrompt='',toastTimer,manualPreset=false;
 function toast(message){$('toast').textContent=message;$('toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('visible'),5000);}
@@ -47,7 +47,7 @@ $('open-guide').addEventListener('click',()=>{$('panduan').open=true;});
 // An external image-based shared counter, not a per-browser fake tally.
 // Only the public deployment requests it; local/offline demos do not inflate it.
 const badge=$('visit-badge'),fallback=$('visit-fallback');
-if(location.hostname==='ustppu.github.io'&&location.pathname.startsWith('/pgbpustudio/')){
+if(location.hostname==='ustppu.github.io'&&location.pathname.startsWith('/studio-cikgu-pu/')){
  badge.addEventListener('load',()=>{badge.hidden=false;fallback.hidden=true;});
  badge.addEventListener('error',()=>{badge.hidden=true;fallback.hidden=false;fallback.textContent='Lawatan · tidak tersedia';});
  badge.src='https://hits.sh/ustppu.github.io/pgbpustudio.svg?label=Jumlah%20lawatan&color=163d35&labelColor=6d8451';

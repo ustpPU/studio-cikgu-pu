@@ -2,8 +2,8 @@
 
 Pembantu kreatif digital guru PPD Petaling Utama · USTP, PPD Petaling Utama.
 
-Laman: https://ustppu.github.io/pgbpustudio/
-Repositori: https://github.com/ustpPU/pgbpustudio
+Laman: https://ustppu.github.io/studio-cikgu-pu/
+Repositori: https://github.com/ustpPU/studio-cikgu-pu
 
 ## Aliran
 
@@ -19,7 +19,9 @@ Checkbox **Sediakan ruang untuk logo** menjana arahan ruang bersepadu dengan lat
 
 Badge Hits.sh berkongsi kiraan paparan laman awam sejak integrasi ini diaktifkan. Ia bukan pengguna unik, orang sedang online atau kiraan prompt dijana. Muat semula, cache, sekatan penjejak dan ketersediaan pihak ketiga boleh mempengaruhi kiraan. Jika perkhidmatan gagal, laman memaparkan “tidak tersedia”, tanpa angka rekaan.
 
-Badge hanya diminta pada hos `ustppu.github.io` di laluan `/pgbpustudio/`. Demo setempat tidak memintanya. Tiada kandungan borang atau prompt dihantar kepada kaunter. Seperti permintaan web lain, penyedia menerima metadata rangkaian permintaan. Sumber penyedia: https://github.com/silentsoft/hits dan https://hits.sh/privacy/ .
+Pengenal kaunter Hits.sh menggunakan nama laluan asal `pgbpustudio` supaya kiraan lawatan sebelum pertukaran nama diteruskan.
+
+Badge hanya diminta pada hos `ustppu.github.io` di laluan `/studio-cikgu-pu/`. Demo setempat tidak memintanya. Tiada kandungan borang atau prompt dihantar kepada kaunter. Seperti permintaan web lain, penyedia menerima metadata rangkaian permintaan. Sumber penyedia: https://github.com/silentsoft/hits dan https://hits.sh/privacy/ .
 
 ## Jalankan dan uji
 

@@ -1,5 +1,5 @@
-import {presets} from './data.js?v=20261105-studio-cikgu-pu';
-import {creativeDirection} from './creative.js?v=20261105-studio-cikgu-pu';
+import {presets} from './data.js?v=20261105-studio-cikgu-pu2';
+import {creativeDirection} from './creative.js?v=20261105-studio-cikgu-pu2';
 export const formats = [
 {id:'social',name:'Media sosial / WhatsApp',px:[1080,1080],safe:60,note:'Nisbah 1:1. PNG/JPEG sRGB. Saiz piksel lebih penting daripada metadata DPI untuk skrin.'},
 {id:'story',name:'Story / Status menegak',px:[1080,1920],safe:90,note:'Nisbah 9:16. Simpan teks utama sekurang-kurangnya 250 px dari atas dan bawah untuk mengelak kawalan aplikasi.'},
