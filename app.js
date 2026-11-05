@@ -1,6 +1,6 @@
-import {categories,presets} from './data.js?v=20261104-compact1';
-import {visualStyles,colorTreatments,detailLevels,creativeDirection} from './creative.js?v=20261104-compact1';
-import {formats,getSpec,recommend,buildPrompt} from './engine.js?v=20261104-compact1';
+import {categories,presets} from './data.js?v=20261105-studio-cikgu-pu';
+import {visualStyles,colorTreatments,detailLevels,creativeDirection} from './creative.js?v=20261105-studio-cikgu-pu';
+import {formats,getSpec,recommend,buildPrompt} from './engine.js?v=20261105-studio-cikgu-pu';
 const $=id=>document.getElementById(id),form=$('prompt-form');
 let mode='quick',previousMode='quick',selected=presets[0],lastPrompt='',toastTimer,manualPreset=false;
 function toast(message){$('toast').textContent=message;$('toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('visible'),5000);}
@@ -31,7 +31,7 @@ form.addEventListener('input',markStale);form.addEventListener('change',markStal
 form.addEventListener('submit',e=>{e.preventDefault();try{lastPrompt=buildPrompt(data(),{preset:selected});$('prompt-output').value=lastPrompt;$('generated').hidden=false;$('empty-output').hidden=true;$('stale').hidden=true;$('copy').disabled=false;$('download-prompt').disabled=false;$('logo-note').hidden=!$('logo-space').checked;$('repair-note').hidden=mode!=='repair';$('result').scrollIntoView({behavior:'smooth',block:'start'});toast('Prompt siap. Salin dan tampal di AI.');}catch(err){toast(err.message);}});
 $('copy').addEventListener('click',async()=>{if(!lastPrompt||$('copy').disabled)return;try{await navigator.clipboard.writeText(lastPrompt);toast($('logo-space').checked?'Prompt disalin. Tambah logo asal selepas imej dijana.':'Prompt disalin. Tampal di AI pilihan anda.');}catch{$('prompt-output').focus();$('prompt-output').select();toast('Teks dipilih. Tekan Salin / Copy pada peranti anda.');}});
 function download(blob,name){const a=document.createElement('a'),url=URL.createObjectURL(blob);a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);}
-$('download-prompt').addEventListener('click',()=>{if(lastPrompt&&!$('download-prompt').disabled)download(new Blob([lastPrompt],{type:'text/plain;charset=utf-8'}),'pgbpu-master-prompt.txt');});
+$('download-prompt').addEventListener('click',()=>{if(lastPrompt&&!$('download-prompt').disabled)download(new Blob([lastPrompt],{type:'text/plain;charset=utf-8'}),'studio-cikgu-pu-master-prompt.txt');});
 const draftKey='pgbpu-studio-draft-v1';
 $('save').addEventListener('click',()=>{try{localStorage.setItem(draftKey,JSON.stringify({version:1,values:data(),preset:selected.id,previousMode,customize:$('customize').open}));toast('Draf disimpan pada pelayar ini.');}catch{toast('Draf tidak dapat disimpan. Simpan prompt sebagai .txt.');}});
 $('load').addEventListener('click',()=>{try{const raw=localStorage.getItem(draftKey);if(!raw){toast('Belum ada draf pada pelayar ini.');return;}const draft=JSON.parse(raw),d=draft.values;

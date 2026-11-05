@@ -1,6 +1,6 @@
-# PGBPU Studio
+# Studio Cikgu PU
 
-Pembantu kreatif digital pemimpin sekolah · USTP, PPD Petaling Utama.
+Pembantu kreatif digital guru PPD Petaling Utama · USTP, PPD Petaling Utama.
 
 Laman: https://ustppu.github.io/pgbpustudio/
 Repositori: https://github.com/ustpPU/pgbpustudio
@@ -29,7 +29,7 @@ Dari folder ini:
 python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-Buka http://127.0.0.1:4173/ . `index.html` menggunakan modul JavaScript, jadi gunakan pelayan HTTP. Fail serahan berasingan `PGBPU-Studio-Demo.html` mempunyai semua kod dan gaya dibenamkan untuk demo tanpa pelayan.
+Buka http://127.0.0.1:4173/ . `index.html` menggunakan modul JavaScript, jadi gunakan pelayan HTTP. Fail serahan berasingan `Studio-Cikgu-PU-Demo.html` mempunyai semua kod dan gaya dibenamkan untuk demo tanpa pelayan.
 
 ```sh
 npm test
